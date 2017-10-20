@@ -10,12 +10,18 @@ module.exports = app =>{
     })
   );
 
-  // user being sent back from google
-  app.get('/auth/google/callback', passport.authenticate('google'));
+  // user being sent back from google. this is middleware
+  app.get('/auth/google/callback', passport.authenticate('google'),
+    (req,res) => {
+
+      res.redirect('/dashboard');
+    }
+
+);
 
   app.get('/api/logout', (req, res) =>{
     req.logout();
-    res.send(req.user);
+    res.redirect('/');
   });
 
   app.get('/api/current_user', (req, res) =>{
