@@ -5,7 +5,7 @@ const passport = require('passport');
 const keys = require('./config/keys');
 require('./models/User');
 require('./services/passport');
-
+const path = require('path')
 
 
 
@@ -22,6 +22,8 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use(express.static(path.join(__dirname, '/public')));
 
 require('./routes/authroutes')(app);
 
