@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import '../style.css';
 
 class Header extends Component {
   renderContent(){
@@ -9,14 +10,13 @@ class Header extends Component {
         return;
       case false:
         return (
-          <li>
-            <a href="/auth/google">Login with Google </a>
-          </li>
+        <button className='btn btn-primary btn-lg'><a href="/auth/google">Login with Google</a> </button>
+
         );
       default:
         return(
-          <li>   <a href="/api/logout">logged in</a>
-          </li>
+        <button classname='btn btn-primary'><a href="/api/logout">logged in</a></button>
+
         );
     }
   }

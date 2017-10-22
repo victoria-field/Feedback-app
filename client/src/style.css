@@ -6,8 +6,25 @@ img {
 	display: flex;
 }
 
+/*.hmBtn{
+	background-color: rgb(14, 7, 2);
+	float: right;
+	text-align: center;
+	font-size: 30px;
+	margin-top: 10px;
+	height: 90px;
+	width: 40%;
+}
+.homBtn{
+		background-color: rgb(14, 7, 2);
+		float: right;
+		text-align: center;
+		font-size: 30px;
+		margin-top: 10px;
+		height: 90px;
+		width: 40%;
 
-
+}*/
 .brand-logo{
 	background-color: rgb(141, 179, 43);
 	width: 40%;
@@ -26,8 +43,20 @@ img {
 
 .jumbotron{
 	background-color: rgb(61, 213, 255);
-	height: 600px;
+	height: 400px;
 
+}
+
+button {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
 }
 
 body{
