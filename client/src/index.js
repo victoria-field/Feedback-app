@@ -1,10 +1,9 @@
-// import materializeCSS from 'materialize-css/dist/css/materialize.min.css';
+import materializeCSS from 'materialize-css/dist/css/materialize.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import reduxThunk from 'redux-thunk';
-// import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
 
 
 
@@ -19,3 +18,6 @@ ReactDOM.render(
   </Provider>,
 
   document.querySelector('#root'));
+
+  console.log('stripe key is ', process.env.REACT_APP_STRIPE_KEY);
+  console.log('environment is ', process.env.NODE_ENV);

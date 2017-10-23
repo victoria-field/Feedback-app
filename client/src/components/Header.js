@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import '../style.css';
+import Payments from './Payments';
 
 class Header extends Component {
   renderContent(){
@@ -10,14 +10,16 @@ class Header extends Component {
         return;
       case false:
         return (
-        <button className='btn btn-primary btn-lg'><a href="/auth/google">Login with Google</a> </button>
-
+          <li>
+            <a href="/auth/google">Login with Google </a>
+          </li>
         );
       default:
-        return(
-        <button classname='btn btn-primary'><a href="/api/logout">logged in</a></button>
-
-        );
+        return [
+          <li key="1"> <Payments /> </li>,
+          <li key="3" style={{margin: '0 10px'}}> Credits: {this.props.auth.credits}</li>,
+          <li key="2"><a href="/api/logout">logout</a></li>
+        ];
     }
   }
 
@@ -25,21 +27,18 @@ class Header extends Component {
     return (
       <nav>
         <div className="nav-wrapper">
-          <Link to ={this.props.auth ? '/dashboard' : '/'}
+          <Link to ={this.props.auth ? '/surveys' : '/'}
             className="left brand-logo"
-        >Eli's App</Link>
-          <ul id="nav-mobile" className="right hide-on-med-and-down">
+        >Feedback</Link>
+          <ul className="right">
             {this.renderContent()}
-
           </ul>
         </div>
       </nav>
     )
   }
 }
-
 function mapStateToProps({auth}){
   return {auth};
 }
-
 export default connect(mapStateToProps) (Header);

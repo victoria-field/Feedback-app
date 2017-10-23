@@ -4,11 +4,10 @@ const Landing = () => {
   return (
     <div style={{textAlign: 'center'}}>
       <h1>
-        Eli's App
+        Feedback
       </h1>
-      Where you can manage your day!
+      Collect feedback from your users
     </div>
   )
 }
-
 export default Landing;

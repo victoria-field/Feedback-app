@@ -7,13 +7,13 @@ import getAttrs from './calendar';
 const Dashboard = props => (
 
 	<div class="jumbotron">
-		<div>
+		{/* <div>
 		{props.show_modal ? (
 			<Modal closeModal={props.closeModal.bind(this)} />
 		) : ''}
 
 		<button className='btn btn-primary'onClick={props.showModal.bind(this)}>Show Modal</button>
-	</div>
+	</div> */}
 	</div>
 );
 
