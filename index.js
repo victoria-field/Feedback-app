@@ -5,6 +5,7 @@ const cookieSession = require('cookie-session');
 const passport = require('passport');
 const keys = require('./config/keys');
 require('./models/User');
+require('./models/Survey');
 require('./services/passport');
 const path = require('path');
 
@@ -30,6 +31,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 require('./routes/authroutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
 
 if(process.env.NODE_ENV === 'production'){
   // express will serve up production assets like main.js file or main.css

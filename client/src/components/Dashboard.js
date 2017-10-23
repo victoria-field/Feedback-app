@@ -1,20 +1,19 @@
 import React from 'react';
-import Modal from './Modal';
-import getAttrs from './calendar';
-// import { Button } from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
 
-const Dashboard = props => (
+const Dashboard = () => {
+	return (
+	<div>
+		Dashboard
+		<div class="fixed-action-btn">
+    <Link to="/surveys/new" class="btn-floating btn-large red">
+      <i class="large material-icons">add</i>
+    </Link>
 
-	<div class="jumbotron">
-		{/* <div>
-		{props.show_modal ? (
-			<Modal closeModal={props.closeModal.bind(this)} />
-		) : ''}
-
-		<button className='btn btn-primary'onClick={props.showModal.bind(this)}>Show Modal</button>
-	</div> */}
+  </div>
 	</div>
 );
+}
 
 export default Dashboard;
