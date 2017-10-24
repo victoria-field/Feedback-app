@@ -18,6 +18,7 @@ module.exports = (survey) => {
         </div>
       </div>
       </div>
+      <div>This was sent from Feedback who parteners with great companies to make them better. You can visit us at https://tranquil-island-96902.herokuapp.com for more information</div>
     </body>
 
 
