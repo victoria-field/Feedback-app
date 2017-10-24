@@ -6,7 +6,9 @@ const Landing = () => {
       <h1>
         Feedback
       </h1>
-      Collect feedback from your users
+      Collect feedback from your users.
+
+      We connect small businesses to their customers. If you have any questions please feel free to contact us at Info@feedback.com.
     </div>
   )
 }
